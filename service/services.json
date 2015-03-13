@@ -1,0 +1,319 @@
+{
+  "displayText": {
+    "id": "Id",
+    "name": "Site",
+    "devSite": "Developer Site",
+    "api": "Web API",
+    "params": "Parameters",
+    "basicParams": "Parameter Map"
+  },
+  "services": [
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "devSite": "https://developers.facebook.com/docs/sharing/reference/share-dialog",
+      "api": "https://www.facebook.com/sharer/sharer.php",
+      "params": {
+        "u": "",
+        "t": "",
+        "pic": ""
+      },
+      "basicParams": {
+        "url": "u",
+        "title": "t",
+        "pic": "pic"
+      }
+    },
+    {
+      "id": "twitter",
+      "name": "Twitter",
+      "devSite": "https://dev.twitter.com/web/tweet-button",
+      "api": "https://twitter.com/intent/tweet",
+      "params": {
+        "url": "",
+        "text": "",
+        "pic": "",
+        "hashtags": "",
+        "via": "",
+        "related": "",
+        "lang": ""
+      },
+      "basicParams": {
+        "url": "url",
+        "title": "text",
+        "pic": "pic"
+      }
+    },
+    {
+      "id": "weibo",
+      "name": "Weibo",
+      "devSite": "http://open.weibo.com/sharebutton",
+      "api": "http://service.weibo.com/share/share.php",
+      "params": {
+        "url": "",
+        "title": "",
+        "pic": "",
+        "ratateUid": "",
+        "searchPic": "",
+        "appkey": "",
+        "language": ""
+      },
+      "basicParams": {
+        "url": "url",
+        "title": "title",
+        "pic": "pic"
+      }
+    },
+    {
+      "id": "qzone",
+      "name": "Qzone",
+      "devSite": "http://connect.qq.com/intro/share",
+      "api": "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey",
+      "params": {
+        "url": "",
+        "title": "",
+        "desc": "",
+        "pics": "",
+        "summary": "",
+        "site": ""
+      },
+      "basicParams": {
+        "url": "url",
+        "title": "title",
+        "pic": "pics",
+        "desc": "desc"
+      }
+    },
+    {
+      "id": "qq",
+      "name": "QQ",
+      "devSite": "http://connect.qq.com/intro/sharetoqq/",
+      "api": "http://connect.qq.com/widget/shareqq/index.html",
+      "params": {
+        "url": "",
+        "title": "",
+        "pics": "",
+        "desc": "",
+        "summary": "",
+        "flash": "",
+        "site": ""
+      },
+      "basicParams": {
+        "url": "url",
+        "title": "title",
+        "pic": "pics",
+        "desc": "desc"
+      }
+    },
+    {
+      "id": "wechat",
+      "name": "Wechat",
+      "devSite": "http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html#.E5.88.86.E4.BA.AB.E6.8E.A5.E5.8F.A3",
+      "api": "",
+      "params": {
+      },
+      "basicParams": {
+      }
+    },
+    {
+      "id": "googleplus",
+      "name": "Google+",
+      "devSite": "https://developers.google.com/+/web/share/",
+      "api": "https://plus.google.com/share",
+      "params": {
+        "url": "",
+        "hl": ""
+      },
+      "basicParams": {
+        "url": "url"
+      }
+    },
+    {
+      "id": "linkedin",
+      "name": "LinkedIn",
+      "devSite": "https://developer.linkedin.com/docs/share-on-linkedin",
+      "api": "https://www.linkedin.com/shareArticle",
+      "params": {
+        "url": "",
+        "mini": {
+          "required": true,
+          "default": true,
+          "description": ""
+        },
+        "title": "",
+        "summary": "",
+        "source": ""
+      },
+      "basicParams": {
+        "url": "url",
+        "title": "title",
+        "desc": "summary"
+      }
+    },
+    {
+      "id": "tieba",
+      "name": "Tieba",
+      "devSite": "",
+      "api": "http://tieba.baidu.com/f/commit/share/openShareApi",
+      "params": {
+        "url": "",
+        "title": "",
+        "pic": "",
+        "desc": ""
+      },
+      "basicParams": {
+        "url": "url",
+        "title": "title",
+        "pic": "pic",
+        "desc": "desc"
+      }
+    },
+    {
+      "id": "douban",
+      "name": "Douban",
+      "devSite": "http://www.douban.com/service/sharebutton",
+      "api": "http://www.douban.com/share/service",
+      "params": {
+        "url": "",
+        "title": "",
+        "pic": "",
+        "text": "",
+        "image": ""
+      },
+      "basicParams": {
+        "url": "url",
+        "title": "title",
+        "pic": "pic",
+        "desc": "text"
+      }
+    },
+    {
+      "id": "renren",
+      "name": "Renren",
+      "devSite": "http://dev.renren.com/website/?widget=rrshare&content=use",
+      "api": "http://widget.renren.com/dialog/share",
+      "params": {
+        "resourceUrl": "",
+        "title": "",
+        "pic": "",
+        "description": "",
+        "srcUrl": ""
+      },
+      "basicParams": {
+        "url": "resourceUrl",
+        "title": "title",
+        "pic": "pic",
+        "desc": "description"
+      }
+    },
+    {
+      "id": "reddit",
+      "name": "Reddit",
+      "devSite": "http://www.reddit.com/buttons/",
+      "api": "http://www.reddit.com/submit",
+      "params": {
+        "url": "",
+        "title": ""
+      },
+      "basicParams": {
+        "url": "url",
+        "title": "title"
+      }
+    },
+    {
+      "id": "tumblr",
+      "name": "Tumblr",
+      "devSite": "https://www.tumblr.com/buttons",
+      "api": "http://www.tumblr.com/share/link",
+      "params": {
+        "url": "",
+        "name": "",
+        "description": ""
+      },
+      "basicParams": {
+        "url": "url",
+        "title": "name",
+        "desc": "description"
+      }
+    },
+    {
+      "id": "pinterest",
+      "name": "Pinterest",
+      "devSite": "https://developers.pinterest.com/pin_it/",
+      "api": "https://www.pinterest.com/pin/create/button/",
+      "params": {
+        "url": "",
+        "media": "",
+        "description": ""
+      },
+      "basicParams": {
+        "url": "url",
+        "title": "description",
+        "pic": "media"
+      }
+    },
+    {
+      "id": "pocket",
+      "name": "Pocket",
+      "devSite": "http://getpocket.com/publisher/button_docs",
+      "api": "https://getpocket.com/save",
+      "params": {
+        "url": "",
+        "title": ""
+      },
+      "basicParams": {
+        "url": "url",
+        "title": "title"
+      }
+    },
+    {
+      "id": "delicious",
+      "name": "Delicious",
+      "devSite": "https://delicious.com/tools",
+      "api": "https://delicious.com/save",
+      "params": {
+        "url": "",
+        "title": "",
+        "v": {
+          "required": true,
+          "default": 5,
+          "description": ""
+        },
+        "provider": "",
+        "noui": "",
+        "jump": "close"
+      },
+      "basicParams": {
+        "url": "url",
+        "title": "title"
+      }
+    },
+    {
+      "id": "tweibo",
+      "name": "Tencent Weibo",
+      "devSite": "http://dev.t.qq.com/websites/share/",
+      "api": "http://share.v.t.qq.com/index.php",
+      "params": {
+        "url": "",
+        "title": "",
+        "pic": "",
+        "appkey": "",
+        "c": {
+          "required": true,
+          "default": "share",
+          "description": ""
+        },
+        "a": {
+          "required": true,
+          "default": "index",
+          "description": ""
+        }
+      },
+      "basicParams": {
+        "url": "url",
+        "title": "title",
+        "pic": "pic"
+      }
+    }
+  ]
+}
