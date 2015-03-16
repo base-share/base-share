@@ -1,10 +1,9 @@
-### Services
+<%
+  var displayText = locals.displayText;
+  var services = locals.services;
 
-<% var displayText = locals.displayText %>
-<% var services = locals.services %>
-
-<% for (var i = 0, len = services.length; i < len; i++) { %>
-## <%- services[i].name %>
+  for (var i = 0, len = services.length; i < len; i++) { %>
+### <%- services[i].name %>
 
 **<%- displayText.devSite %>:** [<%- services[i].devSite %>](<%- services[i].devSite %>)
 
@@ -16,7 +15,22 @@
   var paramKeys = Object.keys(params);
   
   for (var j = 0; j < paramKeys.length; j++) { %>
-- **<%- paramKeys[j] %>:** <%- params[paramKeys[j]] %><% } %>
+- **<%- paramKeys[j] %>:** <%
+    var paramValue = params[paramKeys[j]];
+    var text = '';
+
+    if (typeof paramValue === 'object') {
+      if (paramValue.required) {
+        text += 'Required: true; ';
+      }
+      if (paramValue.default) {
+        text += 'Default: ' + paramValue.default + '; ';
+      }
+      text += paramValue.description;
+    } else {
+      text = paramValue;
+    }
+%><%- text %><% } %>
 
 **<%- displayText.basicParams %>:**
 
