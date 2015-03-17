@@ -2,19 +2,23 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>Basic</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
-<body>
+<body class="basic">
   <div class="social-share">
-    <ul id="base-share-list" class="base-share-list" data-url="https://github.com/Alex1990/" data-title="Alex Chao">
-      <li class="base-share-item item-weibo" data-id="weibo" data-ralateuid="1660160490"><a href="javascript:;">Weibo</a></li>
-      <li class="base-share-item item-qzone" data-id="qzone"><a href="javascript:;">Qzone</a></li>
-      <li class="base-share-item item-twitter" data-id="twitter"><a href="javascript:;">Twitter</a></li>
+    <ul id="base-share-list" class="base-share-list clearfix" data-url="https://github.com/base-share/base-share" 
+    data-title="A basic share jQuery plugin" data-pic="https://avatars2.githubusercontent.com/u/11400523?v=3&s=200">
+      <li class="base-share-item item-facebook" data-id="facebook"><i class="fa fa-facebook"></i><span class="visuallyhidden">Facebook</span></li>
+      <li class="base-share-item item-twitter" data-id="twitter"><i class="fa fa-twitter"></i><span class="visuallyhidden">Twitter</span></li>
+      <li class="base-share-item item-weibo" data-id="weibo"><i class="fa fa-weibo"></i><span class="visuallyhidden">Weibo</span></li>
     </ul>
   </div>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
   <script src="../src/base-share.js"></script>
   <script>
-    baseShare(document.getElementById('base-share-list'));
+    $(document).baseShare();
   </script>
 </body>
 </html>
