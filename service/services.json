@@ -5,7 +5,7 @@
     "devSite": "Developer Site",
     "api": "Web API",
     "params": "Parameters",
-    "basicParams": "Parameter Map"
+    "paramMap": "Parameter Map"
   },
   "services": [
     {
@@ -18,9 +18,9 @@
         "t": "",
         "pic": ""
       },
-      "basicParams": {
-        "url": "u",
-        "title": "t",
+      "paramMap": {
+        "u": "url",
+        "t": "title",
         "pic": "pic"
       }
     },
@@ -38,9 +38,9 @@
         "related": "",
         "lang": ""
       },
-      "basicParams": {
+      "paramMap": {
         "url": "url",
-        "title": "text",
+        "text": "title",
         "pic": "pic"
       }
     },
@@ -53,12 +53,12 @@
         "url": "",
         "title": "",
         "pic": "",
-        "ratateUid": "",
+        "ralateUid": "",
         "searchPic": "",
         "appkey": "",
         "language": ""
       },
-      "basicParams": {
+      "paramMap": {
         "url": "url",
         "title": "title",
         "pic": "pic"
@@ -77,10 +77,10 @@
         "summary": "",
         "site": ""
       },
-      "basicParams": {
+      "paramMap": {
         "url": "url",
         "title": "title",
-        "pic": "pics",
+        "pics": "pic",
         "desc": "desc"
       }
     },
@@ -98,10 +98,10 @@
         "flash": "",
         "site": ""
       },
-      "basicParams": {
+      "paramMap": {
         "url": "url",
         "title": "title",
-        "pic": "pics",
+        "pics": "pic",
         "desc": "desc"
       }
     },
@@ -111,8 +111,18 @@
       "devSite": "http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html#.E5.88.86.E4.BA.AB.E6.8E.A5.E5.8F.A3",
       "api": "",
       "params": {
+        "link": "",
+        "title": "",
+        "desc": "",
+        "imgUrl": "",
+        "type": "",
+        "dataUrl": ""
       },
-      "basicParams": {
+      "paramMap": {
+        "link": "url",
+        "title": "title",
+        "imgUrl": "pic",
+        "desc": "desc"
       }
     },
     {
@@ -124,7 +134,7 @@
         "url": "",
         "hl": ""
       },
-      "basicParams": {
+      "paramMap": {
         "url": "url"
       }
     },
@@ -144,10 +154,10 @@
         "summary": "",
         "source": ""
       },
-      "basicParams": {
+      "paramMap": {
         "url": "url",
         "title": "title",
-        "desc": "summary"
+        "summary": "desc"
       }
     },
     {
@@ -161,7 +171,7 @@
         "pic": "",
         "desc": ""
       },
-      "basicParams": {
+      "paramMap": {
         "url": "url",
         "title": "title",
         "pic": "pic",
@@ -180,11 +190,11 @@
         "text": "",
         "image": ""
       },
-      "basicParams": {
+      "paramMap": {
         "url": "url",
         "title": "title",
         "pic": "pic",
-        "desc": "text"
+        "text": "desc"
       }
     },
     {
@@ -199,11 +209,11 @@
         "description": "",
         "srcUrl": ""
       },
-      "basicParams": {
-        "url": "resourceUrl",
+      "paramMap": {
+        "resourceUrl": "url",
         "title": "title",
         "pic": "pic",
-        "desc": "description"
+        "description": "desc"
       }
     },
     {
@@ -215,7 +225,7 @@
         "url": "",
         "title": ""
       },
-      "basicParams": {
+      "paramMap": {
         "url": "url",
         "title": "title"
       }
@@ -230,10 +240,10 @@
         "name": "",
         "description": ""
       },
-      "basicParams": {
+      "paramMap": {
         "url": "url",
-        "title": "name",
-        "desc": "description"
+        "name": "title",
+        "description": "desc"
       }
     },
     {
@@ -246,10 +256,10 @@
         "media": "",
         "description": ""
       },
-      "basicParams": {
+      "paramMap": {
         "url": "url",
-        "title": "description",
-        "pic": "media"
+        "description": "title",
+        "media": "pic"
       }
     },
     {
@@ -261,7 +271,7 @@
         "url": "",
         "title": ""
       },
-      "basicParams": {
+      "paramMap": {
         "url": "url",
         "title": "title"
       }
@@ -283,7 +293,7 @@
         "noui": "",
         "jump": "close"
       },
-      "basicParams": {
+      "paramMap": {
         "url": "url",
         "title": "title"
       }
@@ -309,7 +319,7 @@
           "description": ""
         }
       },
-      "basicParams": {
+      "paramMap": {
         "url": "url",
         "title": "title",
         "pic": "pic"

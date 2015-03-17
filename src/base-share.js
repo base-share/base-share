@@ -1,5 +1,5 @@
 /*!
- * base-share - A basic social share jQuery(optional) plugin
+ * base-share - A basic social share jQuery plugin
  * https://github.com/Alex1990/base-share
  * Under the MIT license | (c) 2015 Alex Chao
  */
@@ -13,89 +13,88 @@
     module.exports = factory(require('jquery'));
   } else {
     // Browser globals
-    factory(global.jQuery, global);
+    factory(global.jQuery);
   }
-}(this, function ($, global) {
+}(this, function ($) {
 
   'use strict';
 
   var SERVICES = {
-    weibo: {
-      api: 'http://v.t.sina.com.cn/share/share.php?url={url}&title={title}&ralateUid={ralateuid}'
-    },
-    qzone: {
-      api: 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={url}'
+    /*service-url-start*/
+    facebook: {
+      api: 'https://www.facebook.com/sharer/sharer.php?u={url}&t={title}&pic={pic}'
     },
     twitter: {
-      api: 'https://twitter.com/intent/tweet?url={url}&text={title}'
+      api: 'https://twitter.com/intent/tweet?url={url}&text={title}&pic={pic}&hashtags={hashtags}&via={via}&related={related}&lang={lang}'
+    },
+    weibo: {
+      api: 'http://service.weibo.com/share/share.php?url={url}&title={title}&pic={pic}&ralateUid={ralateuid}&searchPic={searchpic}&appkey={appkey}&language={language}'
+    },
+    qzone: {
+      api: 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={url}&title={title}&desc={desc}&pics={pic}&summary={summary}&site={site}'
+    },
+    qq: {
+      api: 'http://connect.qq.com/widget/shareqq/index.html?url={url}&title={title}&pics={pic}&desc={desc}&summary={summary}&flash={flash}&site={site}'
+    },
+    wechat: {
+      api: '?link={url}&title={title}&desc={desc}&imgUrl={pic}&type={type}&dataUrl={dataurl}'
+    },
+    googleplus: {
+      api: 'https://plus.google.com/share?url={url}&hl={hl}'
+    },
+    linkedin: {
+      api: 'https://www.linkedin.com/shareArticle?url={url}&mini=true&title={title}&summary={desc}&source={source}'
+    },
+    tieba: {
+      api: 'http://tieba.baidu.com/f/commit/share/openShareApi?url={url}&title={title}&pic={pic}&desc={desc}'
+    },
+    douban: {
+      api: 'http://www.douban.com/share/service?url={url}&title={title}&pic={pic}&text={desc}&image={image}'
+    },
+    renren: {
+      api: 'http://widget.renren.com/dialog/share?resourceUrl={url}&title={title}&pic={pic}&description={desc}&srcUrl={srcurl}'
+    },
+    reddit: {
+      api: 'http://www.reddit.com/submit?url={url}&title={title}'
+    },
+    tumblr: {
+      api: 'http://www.tumblr.com/share/link?url={url}&name={title}&description={desc}'
+    },
+    pinterest: {
+      api: 'https://www.pinterest.com/pin/create/button/?url={url}&media={pic}&description={title}'
+    },
+    pocket: {
+      api: 'https://getpocket.com/save?url={url}&title={title}'
+    },
+    delicious: {
+      api: 'https://delicious.com/save?url={url}&title={title}&v=5&provider={provider}&noui={noui}&jump={jump}'
+    },
+    tweibo: {
+      api: 'http://share.v.t.qq.com/index.php?url={url}&title={title}&pic={pic}&appkey={appkey}&c=share&a=index'
     }
+    /*service-url-end*/
   };
-
-  var win = window;
-  var doc = document;
 
   var defaults = {
     isPopup: false,
-    width: 600,
+    width: 650,
     height: 500,
-    itemClass: 'base-share-item',
-    dataApiPrefix: 'data-'
+    listSelector: '.base-share-list',
+    itemSelector: '.base-share-item',
+    dataApiPrefix: 'data-',
+    beforeshare: function(){ return true; }
   };
 
-  var keys;
-
-  if (Object.keys) {
-    keys = function(obj) {
-      if (obj != null) {
-        return Object.keys(obj);
-      } else {
-        return [];
-      }
-    };
-  } else {
-    keys = function(obj) {
-      var res = [];
-      for (var p in obj) {
-        if (obj.hasOwnProperty(p)) {
-          res.push(p);
-        }
-      }
-      return res;
-    };
-  }
-
-  var isPlainObject = function(o) {
-    return Object.prototype.toString.call(o) === '[object Object]';
-  };
-
-  var isEmptyObject = function(o) {
-    return isPlainObject(o) && keys(o).length === 0;
-  };
-
-  var extend = function(to, from, deep) {
-    for (var p in from) {
-      if (from.hasOwnProperty(p)) {
-        if (deep && isPlainObject(to[p]) && isPlainObject(from[p])) {
-          to[p] = extend(to[p], from[p], true);
-        } else {
-          to[p] = from[p];
-        }
+  var keys = Object.keys || function(o) {
+    var res = [];
+    for (var p in o) {
+      if (o.hasOwnProperty[p]) {
+        res.push(p);
       }
     }
-    return to;
+    return res;
   };
 
-  var hasClass = function(elem, cls) {
-    return (' ' + elem.className + ' ').indexOf(' ' + cls + ' ') > -1;
-  };
-
-  var dataAttr = function(elem, attr, value) {
-    if (value === void 0) {
-      return elem.getAttribute('data-' + attr);
-    } else {
-      elem.setAttribute('data-' + attr, value);
-    }
-  };
 
   var getParam = function(elem, dataApiPrefix) {
     var obj = {};
@@ -110,35 +109,12 @@
     return obj;
   };
 
-  var addEvent;
-
-  if (doc.addEventListener) {
-    addEvent = function(elem, type, listener, useCapture) {
-      elem.addEventListener(type, listener, !!useCapture);
-    };
-  } else if (doc.attachEvent) {
-    addEvent = function(elem, type, listener) {
-      elem[type + listener] = function() {
-        var e = win.event;
-        e.target = e.srcElement;
-        e.preventDefault = function() {
-          e.returnValue = false;
-        };
-        e.stopPropagation = function() {
-          e.cancelBubble = true;
-        };
-        listener.call(elem, e);
-      };
-      elem.attachEvent('on' + type, elem[type + listener]);
-    };
-  }
-
-  var tmplReplace = function(tmpl, data) {
+  var serviceTmpl = function(tmpl, data) {
     var dataKeys = keys(data);
     for (var i = 0; i < dataKeys.length; i++) {
       tmpl = tmpl.replace('{' + dataKeys[i] + '}', encodeURIComponent(data[dataKeys[i]]));
     }
-    return tmpl;
+    return tmpl.replace(/(\?|&)[^?&]*?=\{.*?\}/g, '$1');
   };
 
   var openUrl = function(opts) {
@@ -156,42 +132,36 @@
 
     popupParams.push('top=' + top + ',left=' + left + ',width=' + opts.width + ',height=' + opts.height);
 
-    win.open.apply(win, popupParams);
+    window.open.apply(window, popupParams);
   };
 
-  var baseShare = function(shareList, opts) {
-    opts = extend({}, extend(defaults, opts));
+  var baseShare = function(delegator, opts) {
+    opts = $.extend({}, defaults, opts);
 
-    var basicParam = getParam(shareList, opts.dataApiPrefix);
+    var listener = function() {
+      var $this = $(this);
+      var $shareList = $this.closest(opts.listSelector);
 
-    addEvent(shareList, 'click', function(e) {
-      var target = e.target;
+      var id = $this.data('id');
+      var param = $.extend(
+        getParam($shareList[0], opts.dataApiPrefix),
+        getParam(this, opts.dataApiPrefix)
+      );
 
-      var id;
-      var url;
-      var param;
-
-      if (hasClass(target, opts.itemClass) && !isEmptyObject(basicParam)) {
-        param = getParam(target, opts.dataApiPrefix);
-        param = extend(basicParam, param);
-        id = dataAttr(target, 'id');
-        url = tmplReplace(SERVICES[id].api, param);
-
-        opts.url = url;
+      opts.url = serviceTmpl(SERVICES[id].api, param);
+      if (opts.beforeshare(this, param)) {
         openUrl(opts);
       }
+    };
+
+    $(delegator).on('click', opts.itemSelector, listener);
+
+  };
+
+  $.fn.baseShare = function(opts) {
+    this.each(function(i, delegator) {
+      baseShare(delegator, opts);
     });
   };
 
-  if ($ && $.fn) {
-    $.fn.baseShare = function(opts) {
-      this.each(function(shareList) {
-        baseShare(shareList, opts);
-      });
-    };
-  } else if (global) {
-    global.baseShare = baseShare;
-  }
-
-  return baseShare;
 }));

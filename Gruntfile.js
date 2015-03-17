@@ -12,12 +12,16 @@ module.exports = function(grunt) {
   // Load all grunt tasks
   require('load-grunt-tasks')(grunt);
 
+  // Load custom tasks
+  grunt.loadTasks('tasks');
+
   // Project configuration
   grunt.initConfig({
     jshint: {
       all: [
         'Gruntfile.js',
-        'src/*.js'
+        'src/*.js',
+        'tasks/*.js'
       ],
       options: {
         jshintrc: '.jshintrc'
@@ -37,9 +41,6 @@ module.exports = function(grunt) {
     }
   });
 
-  // Load custom tasks
-  grunt.loadTasks('tasks');
-
-  grunt.registerTask('default', ['jshint', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'service-url', 'service-doc', 'uglify']);
 
 };

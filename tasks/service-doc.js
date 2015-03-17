@@ -9,9 +9,9 @@ module.exports = function(grunt) {
     var docStr = ejs.render(docTpl, serviceObj);
     var readmeFile = grunt.file.read('README.md');
 
-    var prefix = '{{start}}';
-    var suffix = '{{end}}';
-    var re = new RegExp(prefix + '[\\s\\S]' + suffix);
+    var prefix = '{{service-doc-start}}';
+    var suffix = '{{service-doc-end}}';
+    var re = new RegExp(prefix + '[\\s\\S]*?' + suffix);
 
     readmeFile = readmeFile.replace(re, prefix + '\n' + docStr + '\n' + suffix);
 

@@ -1,11 +1,11 @@
 # base-share
-A base social share plugin for jQuery(optional). **Work in progress**
+A base social share plugin for jQuery. **Work in progress**
 
 ## Services
 
-{{start}}
+{{service-doc-start}}
 
-### Facebook
+### Facebook (id: facebook)
 
 **Developer Site:** [https://developers.facebook.com/docs/sharing/reference/share-dialog](https://developers.facebook.com/docs/sharing/reference/share-dialog)
 
@@ -13,19 +13,19 @@ A base social share plugin for jQuery(optional). **Work in progress**
 
 **Parameters:**
 
-- **u:** 
-- **t:** 
-- **pic:** 
+- u: 
+- t: 
+- pic: 
 
 **Parameter Map:**
 
 | Standard      | Original      |
 | ------------- | ------------- |
-| url           | u             |
-| title         | t             |
+| u             | url           |
+| t             | title         |
 | pic           | pic           |
 
-### Twitter
+### Twitter (id: twitter)
 
 **Developer Site:** [https://dev.twitter.com/web/tweet-button](https://dev.twitter.com/web/tweet-button)
 
@@ -33,23 +33,23 @@ A base social share plugin for jQuery(optional). **Work in progress**
 
 **Parameters:**
 
-- **url:** 
-- **text:** 
-- **pic:** 
-- **hashtags:** 
-- **via:** 
-- **related:** 
-- **lang:** 
+- url: 
+- text: 
+- pic: 
+- hashtags: 
+- via: 
+- related: 
+- lang: 
 
 **Parameter Map:**
 
 | Standard      | Original      |
 | ------------- | ------------- |
 | url           | url           |
-| title         | text          |
+| text          | title         |
 | pic           | pic           |
 
-### Weibo
+### Weibo (id: weibo)
 
 **Developer Site:** [http://open.weibo.com/sharebutton](http://open.weibo.com/sharebutton)
 
@@ -57,13 +57,13 @@ A base social share plugin for jQuery(optional). **Work in progress**
 
 **Parameters:**
 
-- **url:** 
-- **title:** 
-- **pic:** 
-- **ratateUid:** 
-- **searchPic:** 
-- **appkey:** 
-- **language:** 
+- url: 
+- title: 
+- pic: 
+- ralateUid: 
+- searchPic: 
+- appkey: 
+- language: 
 
 **Parameter Map:**
 
@@ -73,7 +73,7 @@ A base social share plugin for jQuery(optional). **Work in progress**
 | title         | title         |
 | pic           | pic           |
 
-### Qzone
+### Qzone (id: qzone)
 
 **Developer Site:** [http://connect.qq.com/intro/share](http://connect.qq.com/intro/share)
 
@@ -81,12 +81,12 @@ A base social share plugin for jQuery(optional). **Work in progress**
 
 **Parameters:**
 
-- **url:** 
-- **title:** 
-- **desc:** 
-- **pics:** 
-- **summary:** 
-- **site:** 
+- url: 
+- title: 
+- desc: 
+- pics: 
+- summary: 
+- site: 
 
 **Parameter Map:**
 
@@ -94,10 +94,10 @@ A base social share plugin for jQuery(optional). **Work in progress**
 | ------------- | ------------- |
 | url           | url           |
 | title         | title         |
-| pic           | pics          |
+| pics          | pic           |
 | desc          | desc          |
 
-### QQ
+### QQ (id: qq)
 
 **Developer Site:** [http://connect.qq.com/intro/sharetoqq/](http://connect.qq.com/intro/sharetoqq/)
 
@@ -105,13 +105,13 @@ A base social share plugin for jQuery(optional). **Work in progress**
 
 **Parameters:**
 
-- **url:** 
-- **title:** 
-- **pics:** 
-- **desc:** 
-- **summary:** 
-- **flash:** 
-- **site:** 
+- url: 
+- title: 
+- pics: 
+- desc: 
+- summary: 
+- flash: 
+- site: 
 
 **Parameter Map:**
 
@@ -119,10 +119,10 @@ A base social share plugin for jQuery(optional). **Work in progress**
 | ------------- | ------------- |
 | url           | url           |
 | title         | title         |
-| pic           | pics          |
+| pics          | pic           |
 | desc          | desc          |
 
-### Wechat
+### Wechat (id: wechat)
 
 **Developer Site:** [http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html#.E5.88.86.E4.BA.AB.E6.8E.A5.E5.8F.A3](http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html#.E5.88.86.E4.BA.AB.E6.8E.A5.E5.8F.A3)
 
@@ -130,13 +130,23 @@ A base social share plugin for jQuery(optional). **Work in progress**
 
 **Parameters:**
 
+- link: 
+- title: 
+- desc: 
+- imgUrl: 
+- type: 
+- dataUrl: 
 
 **Parameter Map:**
 
 | Standard      | Original      |
 | ------------- | ------------- |
+| link          | url           |
+| title         | title         |
+| imgUrl        | pic           |
+| desc          | desc          |
 
-### Google+
+### Google+ (id: googleplus)
 
 **Developer Site:** [https://developers.google.com/+/web/share/](https://developers.google.com/+/web/share/)
 
@@ -144,8 +154,8 @@ A base social share plugin for jQuery(optional). **Work in progress**
 
 **Parameters:**
 
-- **url:** 
-- **hl:** 
+- url: 
+- hl: 
 
 **Parameter Map:**
 
@@ -153,7 +163,7 @@ A base social share plugin for jQuery(optional). **Work in progress**
 | ------------- | ------------- |
 | url           | url           |
 
-### LinkedIn
+### LinkedIn (id: linkedin)
 
 **Developer Site:** [https://developer.linkedin.com/docs/share-on-linkedin](https://developer.linkedin.com/docs/share-on-linkedin)
 
@@ -161,11 +171,11 @@ A base social share plugin for jQuery(optional). **Work in progress**
 
 **Parameters:**
 
-- **url:** 
-- **mini:** Required: true; Default: true; 
-- **title:** 
-- **summary:** 
-- **source:** 
+- url: 
+- mini: Required: true; Default: true; 
+- title: 
+- summary: 
+- source: 
 
 **Parameter Map:**
 
@@ -173,9 +183,9 @@ A base social share plugin for jQuery(optional). **Work in progress**
 | ------------- | ------------- |
 | url           | url           |
 | title         | title         |
-| desc          | summary       |
+| summary       | desc          |
 
-### Tieba
+### Tieba (id: tieba)
 
 **Developer Site:** []()
 
@@ -183,10 +193,10 @@ A base social share plugin for jQuery(optional). **Work in progress**
 
 **Parameters:**
 
-- **url:** 
-- **title:** 
-- **pic:** 
-- **desc:** 
+- url: 
+- title: 
+- pic: 
+- desc: 
 
 **Parameter Map:**
 
@@ -197,7 +207,7 @@ A base social share plugin for jQuery(optional). **Work in progress**
 | pic           | pic           |
 | desc          | desc          |
 
-### Douban
+### Douban (id: douban)
 
 **Developer Site:** [http://www.douban.com/service/sharebutton](http://www.douban.com/service/sharebutton)
 
@@ -205,11 +215,11 @@ A base social share plugin for jQuery(optional). **Work in progress**
 
 **Parameters:**
 
-- **url:** 
-- **title:** 
-- **pic:** 
-- **text:** 
-- **image:** 
+- url: 
+- title: 
+- pic: 
+- text: 
+- image: 
 
 **Parameter Map:**
 
@@ -218,9 +228,9 @@ A base social share plugin for jQuery(optional). **Work in progress**
 | url           | url           |
 | title         | title         |
 | pic           | pic           |
-| desc          | text          |
+| text          | desc          |
 
-### Renren
+### Renren (id: renren)
 
 **Developer Site:** [http://dev.renren.com/website/?widget=rrshare&content=use](http://dev.renren.com/website/?widget=rrshare&content=use)
 
@@ -228,22 +238,22 @@ A base social share plugin for jQuery(optional). **Work in progress**
 
 **Parameters:**
 
-- **resourceUrl:** 
-- **title:** 
-- **pic:** 
-- **description:** 
-- **srcUrl:** 
+- resourceUrl: 
+- title: 
+- pic: 
+- description: 
+- srcUrl: 
 
 **Parameter Map:**
 
 | Standard      | Original      |
 | ------------- | ------------- |
-| url           | resourceUrl   |
+| resourceUrl   | url           |
 | title         | title         |
 | pic           | pic           |
-| desc          | description   |
+| description   | desc          |
 
-### Reddit
+### Reddit (id: reddit)
 
 **Developer Site:** [http://www.reddit.com/buttons/](http://www.reddit.com/buttons/)
 
@@ -251,8 +261,8 @@ A base social share plugin for jQuery(optional). **Work in progress**
 
 **Parameters:**
 
-- **url:** 
-- **title:** 
+- url: 
+- title: 
 
 **Parameter Map:**
 
@@ -261,7 +271,7 @@ A base social share plugin for jQuery(optional). **Work in progress**
 | url           | url           |
 | title         | title         |
 
-### Tumblr
+### Tumblr (id: tumblr)
 
 **Developer Site:** [https://www.tumblr.com/buttons](https://www.tumblr.com/buttons)
 
@@ -269,19 +279,19 @@ A base social share plugin for jQuery(optional). **Work in progress**
 
 **Parameters:**
 
-- **url:** 
-- **name:** 
-- **description:** 
+- url: 
+- name: 
+- description: 
 
 **Parameter Map:**
 
 | Standard      | Original      |
 | ------------- | ------------- |
 | url           | url           |
-| title         | name          |
-| desc          | description   |
+| name          | title         |
+| description   | desc          |
 
-### Pinterest
+### Pinterest (id: pinterest)
 
 **Developer Site:** [https://developers.pinterest.com/pin_it/](https://developers.pinterest.com/pin_it/)
 
@@ -289,19 +299,19 @@ A base social share plugin for jQuery(optional). **Work in progress**
 
 **Parameters:**
 
-- **url:** 
-- **media:** 
-- **description:** 
+- url: 
+- media: 
+- description: 
 
 **Parameter Map:**
 
 | Standard      | Original      |
 | ------------- | ------------- |
 | url           | url           |
-| title         | description   |
-| pic           | media         |
+| description   | title         |
+| media         | pic           |
 
-### Pocket
+### Pocket (id: pocket)
 
 **Developer Site:** [http://getpocket.com/publisher/button_docs](http://getpocket.com/publisher/button_docs)
 
@@ -309,8 +319,8 @@ A base social share plugin for jQuery(optional). **Work in progress**
 
 **Parameters:**
 
-- **url:** 
-- **title:** 
+- url: 
+- title: 
 
 **Parameter Map:**
 
@@ -319,7 +329,7 @@ A base social share plugin for jQuery(optional). **Work in progress**
 | url           | url           |
 | title         | title         |
 
-### Delicious
+### Delicious (id: delicious)
 
 **Developer Site:** [https://delicious.com/tools](https://delicious.com/tools)
 
@@ -327,12 +337,12 @@ A base social share plugin for jQuery(optional). **Work in progress**
 
 **Parameters:**
 
-- **url:** 
-- **title:** 
-- **v:** Required: true; Default: 5; 
-- **provider:** 
-- **noui:** 
-- **jump:** close
+- url: 
+- title: 
+- v: Required: true; Default: 5; 
+- provider: 
+- noui: 
+- jump: close
 
 **Parameter Map:**
 
@@ -341,7 +351,7 @@ A base social share plugin for jQuery(optional). **Work in progress**
 | url           | url           |
 | title         | title         |
 
-### Tencent Weibo
+### Tencent Weibo (id: tweibo)
 
 **Developer Site:** [http://dev.t.qq.com/websites/share/](http://dev.t.qq.com/websites/share/)
 
@@ -349,12 +359,12 @@ A base social share plugin for jQuery(optional). **Work in progress**
 
 **Parameters:**
 
-- **url:** 
-- **title:** 
-- **pic:** 
-- **appkey:** 
-- **c:** Required: true; Default: share; 
-- **a:** Required: true; Default: index; 
+- url: 
+- title: 
+- pic: 
+- appkey: 
+- c: Required: true; Default: share; 
+- a: Required: true; Default: index; 
 
 **Parameter Map:**
 
@@ -364,4 +374,4 @@ A base social share plugin for jQuery(optional). **Work in progress**
 | title         | title         |
 | pic           | pic           |
 
-{{end}}
+{{service-doc-end}}
