@@ -145,6 +145,10 @@
       "name": "LinkedIn",
       "devSite": "https://developer.linkedin.com/docs/share-on-linkedin",
       "api": "https://www.linkedin.com/shareArticle",
+      "popup": {
+        "width": 650,
+        "height": 550
+      },
       "params": {
         "url": "The URL to share. At most 1024 characters.",
         "mini": {

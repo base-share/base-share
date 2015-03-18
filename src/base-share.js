@@ -64,7 +64,11 @@
       }
     },
     linkedin : {
-      api: 'https://www.linkedin.com/shareArticle?url={url}&mini=true&title={title}&summary={desc}&source={source}'
+      api: 'https://www.linkedin.com/shareArticle?url={url}&mini=true&title={title}&summary={desc}&source={source}',
+      popup: {
+        width: 650,
+        height: 550
+      }
     },
     tieba : {
       api: 'http://tieba.baidu.com/f/commit/share/openShareApi?url={url}&title={title}&pic={pic}&desc={desc}',

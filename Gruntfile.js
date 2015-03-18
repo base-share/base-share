@@ -46,6 +46,6 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('default', ['jshint', 'service-tmpl', 'service-doc', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'uglify']);
 
 };
