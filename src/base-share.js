@@ -29,7 +29,7 @@
       }
     },
     twitter : {
-      api: 'https://twitter.com/intent/tweet?url={url}&text={title}&pic={pic}&hashtags={hashtags}&via={via}&related={related}&lang={lang}',
+      api: 'https://twitter.com/intent/tweet?url={url}&text={title}&hashtags={hashtags}&via={via}&related={related}&lang={lang}',
       popup: {
         width: 600,
         height: 450
@@ -43,14 +43,14 @@
       }
     },
     qzone : {
-      api: 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={url}&title={title}&desc={desc}&pics={pic}&summary={summary}&site={site}',
+      api: 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={url}&title={title}&desc={desc}&pics={pic}&summary={desc}&site={site}',
       popup: {
         width: 700,
         height: 600
       }
     },
     qq : {
-      api: 'http://connect.qq.com/widget/shareqq/index.html?url={url}&title={title}&pics={pic}&desc={desc}&summary={summary}&flash={flash}&site={site}',
+      api: 'http://connect.qq.com/widget/shareqq/index.html?url={url}&title={title}&desc={desc}&pics={pic}&summary={desc}&flash={flash}&site={site}',
       popup: {
         width: 800,
         height: 600
@@ -74,7 +74,7 @@
       }
     },
     douban : {
-      api: 'http://www.douban.com/share/service?url={url}&title={title}&pic={pic}&text={desc}&image={image}',
+      api: 'http://www.douban.com/share/service?url={url}&title={title}&image={pic}&text={desc}',
       popup: {
         width: 770,
         height: 535
@@ -116,14 +116,14 @@
       }
     },
     delicious : {
-      api: 'https://delicious.com/save?url={url}&title={title}&v=5&provider={provider}&noui={noui}&jump={jump}',
+      api: 'https://delicious.com/save?url={url}&title={title}&v=5&provider={provider}&noui&jump=close',
       popup: {
         width: 650,
         height: 580
       }
     },
     tweibo : {
-      api: 'http://share.v.t.qq.com/index.php?url={url}&title={title}&pic={pic}&appkey={appkey}&c=share&a=index',
+      api: 'http://share.v.t.qq.com/index.php?url={url}&title={title}&pic={pic}&appkey&c=share&a=index',
       popup: {
         width: 600,
         height: 500

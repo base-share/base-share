@@ -18,9 +18,9 @@
         "height": 500
       },
       "params": {
-        "u": "",
-        "t": "",
-        "pic": ""
+        "u": "The link to share",
+        "t": "It seems this parameter doesn't work",
+        "pic": "The picture link"
       },
       "paramMap": {
         "u": "url",
@@ -38,18 +38,16 @@
         "height": 450
       },
       "params": {
-        "url": "",
-        "text": "",
-        "pic": "",
-        "hashtags": "",
-        "via": "",
-        "related": "",
-        "lang": ""
+        "url": "URL of the page to share",
+        "text": "Default Tweet text",
+        "hashtags": "Comma separated hashtags appended to tweet text",
+        "via": "Screen name of the user to attribute the Tweet to",
+        "related": "Related accounts",
+        "lang": "The language"
       },
       "paramMap": {
         "url": "url",
-        "text": "title",
-        "pic": "pic"
+        "text": "title"
       }
     },
     {
@@ -62,13 +60,13 @@
         "height": 550
       },
       "params": {
-        "url": "",
-        "title": "",
-        "pic": "",
-        "ralateUid": "",
-        "searchPic": "",
-        "appkey": "",
-        "language": ""
+        "url": "The URL to share",
+        "title": "Default post text",
+        "pic": "The absolute link of a picture to share",
+        "ralateUid": "Related account's uid",
+        "searchPic": "Whether to crawl the pictures in the page",
+        "appkey": "Appkey",
+        "language": "The language"
       },
       "paramMap": {
         "url": "url",
@@ -86,18 +84,18 @@
         "height": 600
       },
       "params": {
-        "url": "",
-        "title": "",
-        "desc": "",
-        "pics": "",
-        "summary": "",
-        "site": ""
+        "url": "The URL to share",
+        "title": "The title of the shared link",
+        "desc": "The default text to say",
+        "pics": "The picture link to share",
+        "summary": "The description of the shared link",
+        "site": "Seem not to work"
       },
       "paramMap": {
         "url": "url",
         "title": "title",
         "pics": "pic",
-        "desc": "desc"
+        "summary": "desc"
       }
     },
     {
@@ -110,19 +108,19 @@
         "height": 600
       },
       "params": {
-        "url": "",
-        "title": "",
-        "pics": "",
-        "desc": "",
-        "summary": "",
-        "flash": "",
-        "site": ""
+        "url": "The URL to share",
+        "title": "The title of the shared link",
+        "desc": "The default text to say",
+        "pics": "The picture link to share",
+        "summary": "The description of the shared link",
+        "flash": "The flash link to share",
+        "site": "See not to work"
       },
       "paramMap": {
         "url": "url",
         "title": "title",
         "pics": "pic",
-        "desc": "desc"
+        "summary": "desc"
       }
     },
     {
@@ -135,8 +133,8 @@
         "height": 500
       },
       "params": {
-        "url": "",
-        "hl": ""
+        "url": "The URL to share",
+        "hl": "The language code"
       },
       "paramMap": {
         "url": "url"
@@ -148,15 +146,15 @@
       "devSite": "https://developer.linkedin.com/docs/share-on-linkedin",
       "api": "https://www.linkedin.com/shareArticle",
       "params": {
-        "url": "",
+        "url": "The URL to share. At most 1024 characters.",
         "mini": {
           "required": true,
           "default": true,
-          "description": ""
+          "description": "A required argment who's value must always be: true"
         },
-        "title": "",
-        "summary": "",
-        "source": ""
+        "title": "The url-encoded title value you wish you use. At most 200 characters",
+        "summary": "The url-encoded description value you wish you use. At most 256 characters",
+        "source": "The url-encoded source of the content (e.g. your website or application name). At most 200 characters"
       },
       "paramMap": {
         "url": "url",
@@ -174,10 +172,10 @@
         "height": 550
       },
       "params": {
-        "url": "",
-        "title": "",
-        "pic": "",
-        "desc": ""
+        "url": "The URL to share",
+        "title": "The topic title",
+        "pic": "The picture link to share",
+        "desc": "The topic content"
       },
       "paramMap": {
         "url": "url",
@@ -196,16 +194,15 @@
         "height": 535
       },
       "params": {
-        "url": "",
-        "title": "",
-        "pic": "",
-        "text": "",
-        "image": ""
+        "url": "The URL of the shared content",
+        "title": "The title of the shared content",
+        "image": "The picture link to share",
+        "text": "The description of the shared content"
       },
       "paramMap": {
         "url": "url",
         "title": "title",
-        "pic": "pic",
+        "image": "pic",
         "text": "desc"
       }
     },
@@ -219,11 +216,11 @@
         "height": 680
       },
       "params": {
-        "resourceUrl": "",
-        "title": "",
-        "pic": "",
-        "description": "",
-        "srcUrl": ""
+        "resourceUrl": "The URL of the shared content",
+        "title": "The title of the shared content",
+        "pic": "The picture link to share",
+        "description": "The description of the shared content",
+        "srcUrl": "The source URL who's default value is the header' Referrer"
       },
       "paramMap": {
         "resourceUrl": "url",
@@ -242,8 +239,8 @@
         "height": 500
       },
       "params": {
-        "url": "",
-        "title": ""
+        "url": "The URL to share",
+        "title": "The title of the shared content"
       },
       "paramMap": {
         "url": "url",
@@ -260,9 +257,9 @@
         "height": 500
       },
       "params": {
-        "url": "",
-        "name": "",
-        "description": ""
+        "url": "The URL to share",
+        "name": "The title of the shared content",
+        "description": "The description of the shared content"
       },
       "paramMap": {
         "url": "url",
@@ -280,9 +277,9 @@
         "height": 580
       },
       "params": {
-        "url": "",
-        "media": "",
-        "description": ""
+        "url": "The URL to share",
+        "media": "The picture link to share",
+        "description": "The title of the shared content"
       },
       "paramMap": {
         "url": "url",
@@ -300,8 +297,8 @@
         "height": 450
       },
       "params": {
-        "url": "",
-        "title": ""
+        "url": "The URL to save",
+        "title": "The picture link to save"
       },
       "paramMap": {
         "url": "url",
@@ -318,16 +315,24 @@
         "height": 580
       },
       "params": {
-        "url": "",
-        "title": "",
+        "url": "The URL to share",
+        "title": "The title of the shared content",
         "v": {
           "required": true,
           "default": 5,
           "description": ""
         },
-        "provider": "",
-        "noui": "",
-        "jump": "close"
+        "provider": "Such as your company name",
+        "noui": {
+          "required": true,
+          "default": null,
+          "description": ""
+        },
+        "jump": {
+          "required": true,
+          "default": "close",
+          "description": ""
+        }
       },
       "paramMap": {
         "url": "url",
@@ -344,10 +349,13 @@
         "height": 500
       },
       "params": {
-        "url": "",
-        "title": "",
-        "pic": "",
-        "appkey": "",
+        "url": "The URL to share",
+        "title": "The text to post",
+        "pic": "The picture link to share",
+        "appkey": {
+          "required": true,
+          "description": "You need register an Tencent Weibo account to get an AppKey"
+        },
         "c": {
           "required": true,
           "default": "share",

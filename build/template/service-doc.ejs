@@ -5,17 +5,15 @@
   for (var i = 0, len = services.length; i < len; i++) { %>
 ### <%- services[i].name %> (id: <%- services[i].id %>)
 
-**<%- displayText.devSite %>:** [<%- services[i].devSite %>](<%- services[i].devSite %>)
-
-**<%- displayText.api %>:** [<%- services[i].api %>](<%- services[i].api %>)
-
-**<%- displayText.params %>:**
+- **<%- displayText.devSite %>:** [<%- services[i].devSite %>](<%- services[i].devSite %>)
+- **<%- displayText.api %>:** [<%- services[i].api %>](<%- services[i].api %>)
+- **<%- displayText.params %>:**
 <%
   var params = services[i].params;
   var paramKeys = Object.keys(params);
   
   for (var j = 0; j < paramKeys.length; j++) { %>
-- <%- paramKeys[j] %>: <%
+  - <%- paramKeys[j] %>: <%
     var paramValue = params[paramKeys[j]];
     var text = '';
 
@@ -32,10 +30,10 @@
     }
 %><%- text %><% } %>
 
-**<%- displayText.paramMap %>:**
+- **<%- displayText.paramMap %>:**
 
-| Standard      | Original      |
-| ------------- | ------------- |<%
+  | Original      | Standard      |
+  | ------------- | ------------- |<%
 
   var paramMap = services[i].paramMap;
   var paramMapKeys = Object.keys(paramMap);
@@ -45,5 +43,5 @@
   for (j = 0; j <  paramMapKeys.length; j++) {
     tmpKey = (paramMapKeys[j] + '             ').slice(0, 13);
     tmpValue = (paramMap[ paramMapKeys[j] ] + '             ').slice(0, 13); %>
-| <%- tmpKey %> | <%- tmpValue %> |<% } %>
+  | <%- tmpKey %> | <%- tmpValue %> |<% } %>
 <% } %>
