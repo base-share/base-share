@@ -1,0 +1,10 @@
+<%
+  var len = locals.length;
+  locals.forEach(function(service, i) { %>
+    <%= service.id %> : {
+      api: '<%- service.apiTmpl %>'<% if (service.isPopup && service.popup) { %>,
+      popup: {
+        width: <%= service.popup.width %>,
+        height: <%= service.popup.height %>
+      }<% } %>
+    }<% if (i < len - 1) { %>,<% } %><% }) %>

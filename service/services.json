@@ -13,6 +13,10 @@
       "name": "Facebook",
       "devSite": "https://developers.facebook.com/docs/sharing/reference/share-dialog",
       "api": "https://www.facebook.com/sharer/sharer.php",
+      "popup": {
+        "width": 600,
+        "height": 500
+      },
       "params": {
         "u": "",
         "t": "",
@@ -29,6 +33,10 @@
       "name": "Twitter",
       "devSite": "https://dev.twitter.com/web/tweet-button",
       "api": "https://twitter.com/intent/tweet",
+      "popup": {
+        "width": 600,
+        "height": 450
+      },
       "params": {
         "url": "",
         "text": "",
@@ -49,6 +57,10 @@
       "name": "Weibo",
       "devSite": "http://open.weibo.com/sharebutton",
       "api": "http://service.weibo.com/share/share.php",
+      "popup": {
+        "width": 600,
+        "height": 550
+      },
       "params": {
         "url": "",
         "title": "",
@@ -69,6 +81,10 @@
       "name": "Qzone",
       "devSite": "http://connect.qq.com/intro/share",
       "api": "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey",
+      "popup": {
+        "width": 700,
+        "height": 600
+      },
       "params": {
         "url": "",
         "title": "",
@@ -89,6 +105,10 @@
       "name": "QQ",
       "devSite": "http://connect.qq.com/intro/sharetoqq/",
       "api": "http://connect.qq.com/widget/shareqq/index.html",
+      "popup": {
+        "width": 800,
+        "height": 600
+      },
       "params": {
         "url": "",
         "title": "",
@@ -110,6 +130,10 @@
       "name": "Google+",
       "devSite": "https://developers.google.com/+/web/share/",
       "api": "https://plus.google.com/share",
+      "popup": {
+        "width": 550,
+        "height": 500
+      },
       "params": {
         "url": "",
         "hl": ""
@@ -145,6 +169,10 @@
       "name": "Tieba",
       "devSite": "",
       "api": "http://tieba.baidu.com/f/commit/share/openShareApi",
+      "popup": {
+        "width": 650,
+        "height": 550
+      },
       "params": {
         "url": "",
         "title": "",
@@ -163,6 +191,10 @@
       "name": "Douban",
       "devSite": "http://www.douban.com/service/sharebutton",
       "api": "http://www.douban.com/share/service",
+      "popup": {
+        "width": 770,
+        "height": 535
+      },
       "params": {
         "url": "",
         "title": "",
@@ -182,6 +214,10 @@
       "name": "Renren",
       "devSite": "http://dev.renren.com/website/?widget=rrshare&content=use",
       "api": "http://widget.renren.com/dialog/share",
+      "popup": {
+        "width": 700,
+        "height": 680
+      },
       "params": {
         "resourceUrl": "",
         "title": "",
@@ -201,6 +237,10 @@
       "name": "Reddit",
       "devSite": "http://www.reddit.com/buttons/",
       "api": "http://www.reddit.com/submit",
+      "popup": {
+        "width": 600,
+        "height": 500
+      },
       "params": {
         "url": "",
         "title": ""
@@ -215,6 +255,10 @@
       "name": "Tumblr",
       "devSite": "https://www.tumblr.com/buttons",
       "api": "http://www.tumblr.com/share/link",
+      "popup": {
+        "width": 450,
+        "height": 500
+      },
       "params": {
         "url": "",
         "name": "",
@@ -231,6 +275,10 @@
       "name": "Pinterest",
       "devSite": "https://developers.pinterest.com/pin_it/",
       "api": "https://www.pinterest.com/pin/create/button/",
+      "popup": {
+        "width": 765,
+        "height": 580
+      },
       "params": {
         "url": "",
         "media": "",
@@ -247,6 +295,10 @@
       "name": "Pocket",
       "devSite": "http://getpocket.com/publisher/button_docs",
       "api": "https://getpocket.com/save",
+      "popup": {
+        "width": 700,
+        "height": 450
+      },
       "params": {
         "url": "",
         "title": ""
@@ -261,6 +313,10 @@
       "name": "Delicious",
       "devSite": "https://delicious.com/tools",
       "api": "https://delicious.com/save",
+      "popup": {
+        "width": 650,
+        "height": 580
+      },
       "params": {
         "url": "",
         "title": "",
@@ -283,6 +339,10 @@
       "name": "Tencent Weibo",
       "devSite": "http://dev.t.qq.com/websites/share/",
       "api": "http://share.v.t.qq.com/index.php",
+      "popup": {
+        "width": 600,
+        "height": 500
+      },
       "params": {
         "url": "",
         "title": "",

@@ -1,14 +1,15 @@
+var ejs = require('ejs');
+
 module.exports = function(grunt) {
 
-  grunt.registerTask('service-url', function() {
+  grunt.registerTask('service-tmpl', function() {
     var options = this.options();
 
-    var reSpecial = /[*+?\[\]()\\^$.]/g;
-    function escapeSpecial(str) {
-      return str.replace(reSpecial, '\\' + '$&');
-    }
+    var escapeSpecial = function(str) {
+      return str.replace(/[*+?\[\]()\\^$.]/g, '\\' + '$&');
+    };
 
-    function serializeParam(service) {
+    var serializeParam = function(service) {
       var params = service.params;
       var paramMap = service.paramMap;
 
@@ -31,24 +32,27 @@ module.exports = function(grunt) {
       }
 
       return res.join('&');
-    }
+    };
 
     var serviceObj = grunt.file.readJSON('service/services.json');
     var services = serviceObj.services;
 
     var service;
-    var serviceUrl = '\n';
-    
+    var data = [];
+
     for (var i = 0, len = services.length; i < len; i++) {
       service = services[i];
       if (!options.services || options.services.indexOf(service.id) > -1) {
-        serviceUrl += service.id + ': {\n  api: \'' +
-                    service.api + '?' + serializeParam(service) +
-                    '\'\n},\n';
+        data.push({
+          id: service.id,
+          apiTmpl: service.api + '?' + serializeParam(service),
+          isPopup: options.isPopup,
+          popup: service.popup
+        });
       }
     }
 
-    serviceUrl = serviceUrl.slice(0, -2).replace(/\n/g, '\n    ');
+    var serviceTmpl = ejs.render(grunt.file.read('service/service-tmpl.ejs'), data);
 
     var prefix = '/*service-url-start*/';
     var suffix = '/*service-url-end*/';
@@ -56,9 +60,9 @@ module.exports = function(grunt) {
 
     var baseShareJS = grunt.file.read('src/base-share.js');
 
-    baseShareJS = baseShareJS.replace(re, prefix + serviceUrl + '\n    ' + suffix);
-
+    baseShareJS = baseShareJS.replace(re, prefix + serviceTmpl + '\n    ' + suffix);
     grunt.file.write('src/base-share.js', baseShareJS);
+
 
  });
 };

@@ -38,9 +38,14 @@ module.exports = function(grunt) {
           }
         ]
       }
+    },
+    'service-tmpl': {
+      options: {
+        isPopup: true
+      }
     }
   });
 
-  grunt.registerTask('default', ['jshint', 'service-url', 'service-doc', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'service-tmpl', 'service-doc', 'uglify']);
 
 };

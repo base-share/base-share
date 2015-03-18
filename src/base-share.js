@@ -21,61 +21,121 @@
 
   var SERVICES = {
     /*service-url-start*/
-    facebook: {
-      api: 'https://www.facebook.com/sharer/sharer.php?u={url}&t={title}&pic={pic}'
+    facebook : {
+      api: 'https://www.facebook.com/sharer/sharer.php?u={url}&t={title}&pic={pic}',
+      popup: {
+        width: 600,
+        height: 500
+      }
     },
-    twitter: {
-      api: 'https://twitter.com/intent/tweet?url={url}&text={title}&pic={pic}&hashtags={hashtags}&via={via}&related={related}&lang={lang}'
+    twitter : {
+      api: 'https://twitter.com/intent/tweet?url={url}&text={title}&pic={pic}&hashtags={hashtags}&via={via}&related={related}&lang={lang}',
+      popup: {
+        width: 600,
+        height: 450
+      }
     },
-    weibo: {
-      api: 'http://service.weibo.com/share/share.php?url={url}&title={title}&pic={pic}&ralateUid={ralateuid}&searchPic={searchpic}&appkey={appkey}&language={language}'
+    weibo : {
+      api: 'http://service.weibo.com/share/share.php?url={url}&title={title}&pic={pic}&ralateUid={ralateuid}&searchPic={searchpic}&appkey={appkey}&language={language}',
+      popup: {
+        width: 600,
+        height: 550
+      }
     },
-    qzone: {
-      api: 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={url}&title={title}&desc={desc}&pics={pic}&summary={summary}&site={site}'
+    qzone : {
+      api: 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={url}&title={title}&desc={desc}&pics={pic}&summary={summary}&site={site}',
+      popup: {
+        width: 700,
+        height: 600
+      }
     },
-    qq: {
-      api: 'http://connect.qq.com/widget/shareqq/index.html?url={url}&title={title}&pics={pic}&desc={desc}&summary={summary}&flash={flash}&site={site}'
+    qq : {
+      api: 'http://connect.qq.com/widget/shareqq/index.html?url={url}&title={title}&pics={pic}&desc={desc}&summary={summary}&flash={flash}&site={site}',
+      popup: {
+        width: 800,
+        height: 600
+      }
     },
-    googleplus: {
-      api: 'https://plus.google.com/share?url={url}&hl={hl}'
+    googleplus : {
+      api: 'https://plus.google.com/share?url={url}&hl={hl}',
+      popup: {
+        width: 550,
+        height: 500
+      }
     },
-    linkedin: {
+    linkedin : {
       api: 'https://www.linkedin.com/shareArticle?url={url}&mini=true&title={title}&summary={desc}&source={source}'
     },
-    tieba: {
-      api: 'http://tieba.baidu.com/f/commit/share/openShareApi?url={url}&title={title}&pic={pic}&desc={desc}'
+    tieba : {
+      api: 'http://tieba.baidu.com/f/commit/share/openShareApi?url={url}&title={title}&pic={pic}&desc={desc}',
+      popup: {
+        width: 650,
+        height: 550
+      }
     },
-    douban: {
-      api: 'http://www.douban.com/share/service?url={url}&title={title}&pic={pic}&text={desc}&image={image}'
+    douban : {
+      api: 'http://www.douban.com/share/service?url={url}&title={title}&pic={pic}&text={desc}&image={image}',
+      popup: {
+        width: 770,
+        height: 535
+      }
     },
-    renren: {
-      api: 'http://widget.renren.com/dialog/share?resourceUrl={url}&title={title}&pic={pic}&description={desc}&srcUrl={srcurl}'
+    renren : {
+      api: 'http://widget.renren.com/dialog/share?resourceUrl={url}&title={title}&pic={pic}&description={desc}&srcUrl={srcurl}',
+      popup: {
+        width: 700,
+        height: 680
+      }
     },
-    reddit: {
-      api: 'http://www.reddit.com/submit?url={url}&title={title}'
+    reddit : {
+      api: 'http://www.reddit.com/submit?url={url}&title={title}',
+      popup: {
+        width: 600,
+        height: 500
+      }
     },
-    tumblr: {
-      api: 'http://www.tumblr.com/share/link?url={url}&name={title}&description={desc}'
+    tumblr : {
+      api: 'http://www.tumblr.com/share/link?url={url}&name={title}&description={desc}',
+      popup: {
+        width: 450,
+        height: 500
+      }
     },
-    pinterest: {
-      api: 'https://www.pinterest.com/pin/create/button/?url={url}&media={pic}&description={title}'
+    pinterest : {
+      api: 'https://www.pinterest.com/pin/create/button/?url={url}&media={pic}&description={title}',
+      popup: {
+        width: 765,
+        height: 580
+      }
     },
-    pocket: {
-      api: 'https://getpocket.com/save?url={url}&title={title}'
+    pocket : {
+      api: 'https://getpocket.com/save?url={url}&title={title}',
+      popup: {
+        width: 700,
+        height: 450
+      }
     },
-    delicious: {
-      api: 'https://delicious.com/save?url={url}&title={title}&v=5&provider={provider}&noui={noui}&jump={jump}'
+    delicious : {
+      api: 'https://delicious.com/save?url={url}&title={title}&v=5&provider={provider}&noui={noui}&jump={jump}',
+      popup: {
+        width: 650,
+        height: 580
+      }
     },
-    tweibo: {
-      api: 'http://share.v.t.qq.com/index.php?url={url}&title={title}&pic={pic}&appkey={appkey}&c=share&a=index'
+    tweibo : {
+      api: 'http://share.v.t.qq.com/index.php?url={url}&title={title}&pic={pic}&appkey={appkey}&c=share&a=index',
+      popup: {
+        width: 600,
+        height: 500
+      }
     }
     /*service-url-end*/
   };
 
   var defaults = {
     isPopup: false,
-    width: 650,
-    height: 500,
+    width: 600,
+    height: 550,
     listSelector: '.base-share-list',
     itemSelector: '.base-share-item',
     dataApiPrefix: 'data-'
@@ -116,19 +176,14 @@
   var openUrl = function(opts) {
     var top;
     var left;
-    var popupParams = [];
-
-    popupParams[0] = opts.url;
 
     if (opts.isPopup) {
-      popupParams[1] = opts.windowName;
-      top = opts.top || (screen.availWidth - opts.width) / 2;
-      left = opts.left || (screen.availHeight - opts.height) / 2;
+      left = opts.top || (screen.availWidth - opts.width) / 2;
+      top = opts.left || (screen.availHeight - opts.height) / 2;
+      window.open(opts.url, opts.windowName || '_blank', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,top=' + top + ',left=' + left + ',width=' + opts.width + ',height=' + opts.height);
+    } else {
+      window.open(opts.url);
     }
-
-    popupParams.push('top=' + top + ',left=' + left + ',width=' + opts.width + ',height=' + opts.height);
-
-    window.open.apply(window, popupParams);
   };
 
   var baseShare = function(delegator, opts) {
@@ -144,7 +199,14 @@
         getParam(this, opts.dataApiPrefix)
       );
 
-      opts.url = serviceTmpl(SERVICES[id].api, param);
+      var service = SERVICES[id];
+
+      opts.url = serviceTmpl(service.api, param);
+
+      if (service.popup) {
+        opts.width = service.popup.width;
+        opts.height = service.popup.height;
+      }
 
       openUrl(opts);
     };
