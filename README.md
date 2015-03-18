@@ -122,30 +122,6 @@ A base social share plugin for jQuery. **Work in progress**
 | pics          | pic           |
 | desc          | desc          |
 
-### Wechat (id: wechat)
-
-**Developer Site:** [http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html#.E5.88.86.E4.BA.AB.E6.8E.A5.E5.8F.A3](http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html#.E5.88.86.E4.BA.AB.E6.8E.A5.E5.8F.A3)
-
-**Web API:** []()
-
-**Parameters:**
-
-- link: 
-- title: 
-- desc: 
-- imgUrl: 
-- type: 
-- dataUrl: 
-
-**Parameter Map:**
-
-| Standard      | Original      |
-| ------------- | ------------- |
-| link          | url           |
-| title         | title         |
-| imgUrl        | pic           |
-| desc          | desc          |
-
 ### Google+ (id: googleplus)
 
 **Developer Site:** [https://developers.google.com/+/web/share/](https://developers.google.com/+/web/share/)

@@ -3,6 +3,10 @@ body {
   font: 1em/1.8 Helvetica, Arial, sans-serif;
 }
 
+.hide {
+  display: none;
+}
+
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -31,7 +35,7 @@ ul {
 }
 
 /* Basic
- * ============== */
+ * ================= */
 
 .basic {
   background-color: #ddd;
@@ -77,3 +81,162 @@ ul {
 .basic .base-share-list .item-weibo:hover {
   background-color: #ea361c;
 }
+
+/* All services
+ * ================= */
+
+.all-service {
+  border-color: #fafafa;
+}
+
+.all-service .social-share {
+  margin: 100px;
+  width: 130px;
+  border: 1px solid #d8d8d8;
+  box-shadow: 0 2px 10px #777;
+}
+
+.all-service .base-share-item {
+  padding: 5px 20px;
+  background-color: #ccc;
+  color: #fff;
+  cursor: pointer;
+}
+
+.all-service .base-share-item:hover {
+  box-shadow: inset 0 0 4px #555;
+}
+
+.all-service .base-share-item span {
+  font-size: 1.125em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+.all-service .base-share-list .item-facebook {
+  background-color: #3b5998;
+}
+
+.all-service .base-share-list .item-facebook:hover {
+  background-color: #2d4373;
+}
+
+.all-service .base-share-list .item-twitter {
+  background-color: #2795e9;
+}
+
+.all-service .base-share-list .item-twitter:hover {
+  background-color: #207fc8;
+}
+
+.all-service .base-share-list .item-googleplus {
+  background-color: #dd4b39;
+}
+
+.all-service .base-share-list .item-googleplus:hover {
+  background-color: #c23321;
+}
+
+.all-service .base-share-list .item-linkedin {
+  background-color: #007bb6;
+}
+
+.all-service .base-share-list .item-linkedin:hover {
+  background-color: #005983;
+}
+
+.all-service .base-share-list .item-weibo {
+  background-color: #e01c0e;
+}
+
+.all-service .base-share-list .item-weibo:hover {
+  background-color: #be160a;
+}
+
+.all-service .base-share-list .item-qzone {
+  background-color: #efcd0c;
+}
+
+.all-service .base-share-list .item-qzone:hover {
+  background-color: #d0b206;
+}
+
+.all-service .base-share-list .item-qq {
+  background-color: #4696d7;
+}
+
+.all-service .base-share-list .item-qq:hover {
+  background-color: #3d84bd;
+}
+
+.all-service .base-share-list .item-douban {
+  background-color: #5ea84d;
+}
+
+.all-service .base-share-list .item-douban:hover {
+  background-color: #4b883d;
+}
+
+.all-service .base-share-list .item-renren {
+  background-color: #319ad0;
+}
+
+.all-service .base-share-list .item-renren:hover {
+  background-color: #297ca8;
+}
+
+.all-service .base-share-list .item-tieba {
+  background-color: #2971b6;
+}
+
+.all-service .base-share-list .item-tieba:hover {
+  background-color: #1f5991;
+}
+
+.all-service .base-share-list .item-reddit {
+  background-color: #ff500f;
+}
+
+.all-service .base-share-list .item-reddit:hover {
+  background-color: #b33d00;
+}
+
+.all-service .base-share-list .item-tumblr {
+  background-color: #2c4762;
+}
+
+.all-service .base-share-list .item-tumblr:hover {
+  background-color: #1c2d3f;
+}
+
+.all-service .base-share-list .item-pinterest {
+  background-color: #cb2027;
+}
+
+.all-service .base-share-list .item-pinterest:hover {
+  background-color: #9f191f;
+}
+
+.all-service .base-share-list .item-delicious {
+  background-color: #2670cc;
+}
+
+.all-service .base-share-list .item-delicious:hover {
+  background-color: #205fad;
+}
+
+.all-service .base-share-list .item-pocket {
+  background-color: #ec4457;
+}
+
+.all-service .base-share-list .item-pocket:hover {
+  background-color: #cb3848;
+}
+
+.all-service .base-share-list .item-tweibo {
+  background-color: #2f96d6;
+}
+
+.all-service .base-share-list .item-tweibo:hover {
+  background-color: #267bb0;
+}
+

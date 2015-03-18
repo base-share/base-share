@@ -36,9 +36,6 @@
     qq: {
       api: 'http://connect.qq.com/widget/shareqq/index.html?url={url}&title={title}&pics={pic}&desc={desc}&summary={summary}&flash={flash}&site={site}'
     },
-    wechat: {
-      api: '?link={url}&title={title}&desc={desc}&imgUrl={pic}&type={type}&dataUrl={dataurl}'
-    },
     googleplus: {
       api: 'https://plus.google.com/share?url={url}&hl={hl}'
     },
@@ -81,8 +78,7 @@
     height: 500,
     listSelector: '.base-share-list',
     itemSelector: '.base-share-item',
-    dataApiPrefix: 'data-',
-    beforeshare: function(){ return true; }
+    dataApiPrefix: 'data-'
   };
 
   var keys = Object.keys || function(o) {
@@ -149,9 +145,8 @@
       );
 
       opts.url = serviceTmpl(SERVICES[id].api, param);
-      if (opts.beforeshare(this, param)) {
-        openUrl(opts);
-      }
+
+      openUrl(opts);
     };
 
     $(delegator).on('click', opts.itemSelector, listener);

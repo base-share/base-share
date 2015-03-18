@@ -106,26 +106,6 @@
       }
     },
     {
-      "id": "wechat",
-      "name": "Wechat",
-      "devSite": "http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html#.E5.88.86.E4.BA.AB.E6.8E.A5.E5.8F.A3",
-      "api": "",
-      "params": {
-        "link": "",
-        "title": "",
-        "desc": "",
-        "imgUrl": "",
-        "type": "",
-        "dataUrl": ""
-      },
-      "paramMap": {
-        "link": "url",
-        "title": "title",
-        "imgUrl": "pic",
-        "desc": "desc"
-      }
-    },
-    {
       "id": "googleplus",
       "name": "Google+",
       "devSite": "https://developers.google.com/+/web/share/",
