@@ -52,7 +52,7 @@ module.exports = function(grunt) {
       }
     }
 
-    var serviceTmpl = ejs.render(grunt.file.read('service/service-tmpl.ejs'), data);
+    var serviceTmpl = ejs.render(grunt.file.read('build/template/service-tmpl.ejs'), data);
 
     var prefix = '/*service-url-start*/';
     var suffix = '/*service-url-end*/';

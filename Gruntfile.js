@@ -13,7 +13,7 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
   // Load custom tasks
-  grunt.loadTasks('tasks');
+  grunt.loadTasks('build/tasks');
 
   // Project configuration
   grunt.initConfig({
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
       all: [
         'Gruntfile.js',
         'src/*.js',
-        'tasks/*.js'
+        'build/tasks/*.js'
       ],
       options: {
         jshintrc: '.jshintrc'
